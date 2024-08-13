@@ -1,0 +1,84 @@
+#include <iostream>
+#include <cstring> // Required for strcpy
+using namespace std;
+
+class Hero {
+public:
+    int health;
+    char level;
+    char *name;
+
+    // Default Constructor
+    Hero() {
+        cout << "I am default Constructor" << endl;
+        name = new char[100];
+    }
+
+    // Parameterized Constructor
+    Hero(int health, char level) {
+        this->health = health;
+        this->level = level;
+        name = new char[100]; // Allocate memory for name
+        cout << "I am parameterized Constructor" << endl;
+    }
+
+    // Copy Constructor (Shallow Copy)
+    Hero(Hero& h) {
+        cout << "This is a copy Constructor (Shallow Copy)" << endl;
+        this->health = h.health;
+        this->level = h.level;
+        // Shallow copy: the name pointer points to the same memory as h.name
+        this->name = h.name;
+    }
+
+    // Getter for Health
+    int getHealth() {
+        return health;
+    }
+
+    // Setter for Health
+    void setHealth(int health) {
+        this->health = health;
+    }
+
+    // Setter for Level
+    void setLevel(char level) {
+        this->level = level;
+    }
+
+    // Print function
+    void print() {
+        cout << endl;
+        cout << "Name is: " << name << endl;
+        cout << "Health is: " << health << endl;
+        cout << "Level is: " << level << endl;
+        cout << endl;
+    }
+
+    // Setter for Name
+    void setName(char name[]) {
+        strcpy(this->name, name);
+    }
+};
+
+int main() {
+    Hero h1; // Default constructor
+    h1.setHealth(20);
+    h1.setLevel('D');
+    char name[7] = "Prui";
+    h1.setName(name);
+
+    h1.print();
+
+    Hero h2(h1); // Copy constructor (shallow copy)
+    h2.print();
+
+    // Modify the name in h1
+    h1.name[0] = 'r';
+
+    // Both h1 and h2 should reflect this change
+    h1.print();
+    h2.print();
+
+    return 0;
+}
