@@ -54,3 +54,33 @@ int main() {
 
     return 0;
 }
+=======================================================================================================================================================
+    #include <iostream>
+using namespace std;
+//Multilevel INHERITANCE
+class Animal{
+  public:
+  int age;
+  int weight;
+  public:
+  void speak()
+  {
+    cout<<"spekaing"<<endl;
+  }
+  
+};
+class Dog : public Animal{
+  
+};
+class tommy : public Dog{
+  
+};
+
+
+int main() {
+  tommy t;
+  t.speak();
+  //cout<<d.age<<endl;
+
+    return 0;
+}
