@@ -61,6 +61,7 @@ void insertAtMiddle(Node* &head, int position, int d) {
 void deleteNode(Node* &head, int position) {
   if (position == 1) {
     // Delete the head node
+    //koora kachra like.....phek diya
     Node* temp = head;
     head = head->next;
     temp->next = NULL; // Break the link
