@@ -1,4 +1,5 @@
-
+/*tc=o(2N) con str=o(n)+o(n)
+sc=o(n)*/
 #include <bits/stdc++.h>
 using namespace std;
 
