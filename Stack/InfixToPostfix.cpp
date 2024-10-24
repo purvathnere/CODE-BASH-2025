@@ -1,3 +1,9 @@
+/*
+tc=o(n)+o(n) for outer loop+ inner loop
+    sc=o(n)+o(n) for store ele + store ans
+    */
+
+
 #include<iostream>
 //#include<bits/stdc.h>
 #include<stack>
