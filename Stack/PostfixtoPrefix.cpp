@@ -1,4 +1,8 @@
-#include <bits/stdc++.h>
+
+/*
+O(N) tc
+O(N) sc
+*/#include <bits/stdc++.h>
 using namespace std;
 
 string PostfixToPrefix(string s) {
