@@ -57,3 +57,31 @@ int main() {
     return 0;
 }
 
+/*
+with o(n square time complexity)
+#include <bits/stdc++.h>
+using namespace std;
+
+const int MOD = 1e9 + 7; 
+
+int MiniSubarray(int arr[], int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        int mini = arr[i];
+        for (int j = i; j < n; j++) {
+            mini = min(mini, arr[j]);
+            sum = (sum + mini) % MOD;
+        }
+    }
+    return sum;
+}
+
+int main() {
+    int arr[] = {3, 1, 4, 2};
+    int n = sizeof(arr) / sizeof(arr[0]); 
+    int ans = MiniSubarray(arr, n);
+    cout << ans << endl;
+    return 0;
+}
+
+*/
