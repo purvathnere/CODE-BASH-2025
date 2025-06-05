@@ -43,3 +43,33 @@ int main()
   
       return 0;
 }
+===================================================================================================================================================
+
+    #include <iostream>
+using namespace std;
+class Person{
+string name;
+public:
+    Person(string n)
+    {
+        name=n;
+    }
+    Person(const Person &obj)
+    {
+        name=obj.name;
+    }
+    void display()
+    {
+        cout<<name<<endl;
+    }
+   
+};
+int main() {
+   Person aice("Ram");
+   Person bob=aice;
+   aice.display();
+   bob.display();
+   
+
+    return 0;
+}
